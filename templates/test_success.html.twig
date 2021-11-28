@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="test-result">
+        <div>
+            <span>Test video: </span>
+            <a href="{{ test_video }}">{{ test_video }}</a>
+        </div>
+
+        {% for comment in comments %}
+            <div class="comment-wrapper">
+                <div>
+                    <span>Comment ID: </span>
+                    {{ comment.id }}
+                </div>
+                <div>
+                    <span>Comment Text: </span>
+                    {{ comment.text }}
+                </div>
+                {% if comment.link %}
+                    <div>
+                        <span>Comment Link: </span>
+                        <a href="{{ comment.link }}">{{ comment.link }}</a>
+                    </div>
+                {% endif %}
+                {% if comment.authorUrl %}
+                    <div>
+                        <span>Comment Author Url: </span>
+                        <a href="{{ comment.authorUrl }}">{{ comment.authorUrl }}</a>
+                    </div>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
