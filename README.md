@@ -1,4 +1,4 @@
-# Bot Comment Finders
+# Bot Comment Finder
 
 Find repetitive comments for social media post.
 
